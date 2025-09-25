@@ -3,6 +3,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SpawnableObject : ScriptableObject
 {
-    string _objectName;
-    GameObject _prefabObject;
+    public string _objectName;
+    public GameObject _prefabObject;
 }
