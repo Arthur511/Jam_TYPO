@@ -6,7 +6,6 @@ public class DragObject : MonoBehaviour
     public LayerMask _snapMask;
 
     GameObject _currentDragObject;
-    SpawnableObject _currentSpawnableObject;
 
     private void Update()
     {
@@ -48,6 +47,11 @@ public class DragObject : MonoBehaviour
                             if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
                             {
                                 _currentDragObject.layer = 0;
+                                MainGame.instance._placementToComplete++;
+                                if (MainGame.instance._placementToComplete == MainGame.instance.ScoreToReach)
+                                {
+                                    MainGame.instance.WinRoom();
+                                }
                             }
                             _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = point2;
                             point2._isSomethingInPoint = true;

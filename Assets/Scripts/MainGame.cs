@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class MainGame : MonoBehaviour
 {
+    public static MainGame instance;
+
+    public int ScoreToReach;
+    [HideInInspector]public int _placementToComplete;
+
     [SerializeField] TMP_InputField _inputField;
     [SerializeField] List<SpawnableObject> _spawnableObjects;
     [SerializeField] Letters _lettersForLevel;
@@ -14,6 +19,12 @@ public class MainGame : MonoBehaviour
     HashSet<string> _alreadySpawnables = new HashSet<string>();
 
     bool _isInList = true;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public void OnSubmit()
     {
         _isInList = true;
@@ -47,4 +58,11 @@ public class MainGame : MonoBehaviour
         }
         _inputField.text = null;
     }
+
+
+    public void WinRoom()
+    {
+        Debug.Log("Room Completed");
+    }
+
 }
