@@ -13,21 +13,21 @@ public class MainGame : MonoBehaviour
     bool _isInList = true;
     public void OnSubmit()
     {
-
         _isInList = true;
-        for (int i = 0; i < _inputField.text.Length; i++)
+        string _lowerInput = _inputField.text.ToLower().Trim();
+        for (int i = 0; i < _lowerInput.Length; i++)
         {
-            if (!_lettersForLevel._levelLetters.Contains(_inputField.text[i]))
+            if (!_lettersForLevel._levelLetters.Contains(_lowerInput[i]))
             {
                 _isInList = false;
+                break;
             }
         }
         if (_isInList)
         {
             foreach (var spawnableObject in _spawnableObjects)
             {
-
-                if (_inputField.text == spawnableObject._objectName)
+                if (_lowerInput == spawnableObject._objectName.ToLower())
                 {
                     Instantiate(spawnableObject._prefabObject, _spawnPointObject);
                 }
