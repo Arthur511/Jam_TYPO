@@ -22,6 +22,11 @@ public class DragObject : MonoBehaviour
                         return;
                     }
                     _currentDragObject = hit.collider.gameObject;
+                    if (_currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint != null)
+                    {
+                        _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint._isSomethingInPoint = false;
+                        _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = null;
+                    }
                     Cursor.visible = false;
                 }
             }
@@ -37,29 +42,24 @@ public class DragObject : MonoBehaviour
                 {
                     if (hit2.collider.gameObject.TryGetComponent<SnapPoint>(out SnapPoint point2))
                     {
-                        _currentDragObject.transform.position = point2.gameObject.transform.position;
-                        if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
+                        if (!point2._isSomethingInPoint)
                         {
-                            _currentDragObject.layer = 0;
+                            _currentDragObject.transform.position = point2.gameObject.transform.position;
+                            if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
+                            {
+                                _currentDragObject.layer = 0;
+                            }
+                            _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = point2;
+                            point2._isSomethingInPoint = true;
+                        }
+                        else
+                        {
+                            return;
                         }
                     }
                 }
                 _currentDragObject = null;
                 Cursor.visible = true;
-                /*RaycastHit hit;
-                Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit, 100, _snapMask);
-                if (hit.collider != null)
-                {
-                    Debug.Log(hit.collider.gameObject);
-                    if (hit.collider.gameObject.TryGetComponent<SnapPoint>(out SnapPoint point))
-                    {
-                        if (point._isSomethingInPoint == false)
-                        {
-                            
-                        }
-                    }
-                }*/
-
             }
         }
 
