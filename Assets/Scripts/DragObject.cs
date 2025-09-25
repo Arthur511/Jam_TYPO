@@ -3,20 +3,10 @@ using UnityEngine;
 public class DragObject : MonoBehaviour
 {
     public LayerMask mask;
+    public LayerMask _snapMask;
 
     GameObject _currentDragObject;
-    bool CheckLayer(int layer, LayerMask layerMask)
-    {
-        if (((1 << layer) & layerMask.value) != 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
+    SpawnableObject _currentSpawnableObject;
 
     private void Update()
     {
@@ -27,7 +17,6 @@ public class DragObject : MonoBehaviour
                 RaycastHit hit = CastRay();
                 if (hit.collider != null)
                 {
-                    Debug.Log("IsDrag");
                     if (CheckLayer(hit.collider.gameObject.layer, mask) == false)
                     {
                         return;
@@ -38,6 +27,38 @@ public class DragObject : MonoBehaviour
             }
             else
             {
+                Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
+                _currentDragObject.transform.position = new Vector3(worldPosition.x, 0, worldPosition.z);
+
+                RaycastHit hit2;
+                Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit2, 100, _snapMask);
+                if (hit2.collider != null)
+                {
+                    if (hit2.collider.gameObject.TryGetComponent<SnapPoint>(out SnapPoint point2))
+                    {
+                        _currentDragObject.transform.position = point2.gameObject.transform.position;
+                        if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
+                        {
+                            _currentDragObject.layer = 0;
+                        }
+                    }
+                }
+                _currentDragObject = null;
+                Cursor.visible = true;
+                /*RaycastHit hit;
+                Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit, 100, _snapMask);
+                if (hit.collider != null)
+                {
+                    Debug.Log(hit.collider.gameObject);
+                    if (hit.collider.gameObject.TryGetComponent<SnapPoint>(out SnapPoint point))
+                    {
+                        if (point._isSomethingInPoint == false)
+                        {
+                            
+                        }
+                    }
+                }*/
 
             }
         }
@@ -46,7 +67,27 @@ public class DragObject : MonoBehaviour
         {
             Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
-            _currentDragObject.transform.position = new Vector2(worldPosition.x, worldPosition.y);
+            _currentDragObject.transform.position = new Vector3(worldPosition.x, 2f, worldPosition.z);
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_currentDragObject != null)
+        {
+            Gizmos.DrawLine(_currentDragObject.transform.position, _currentDragObject.transform.position + Vector3.back * 10);
+        }
+    }
+
+    bool CheckLayer(int layer, LayerMask layerMask)
+    {
+        if (((1 << layer) & layerMask.value) != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
