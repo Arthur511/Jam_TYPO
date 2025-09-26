@@ -39,7 +39,7 @@ public class DragObject : MonoBehaviour
             {
                 Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
-                _currentDragObject.transform.position = new Vector3(worldPosition.x, 0, worldPosition.z);
+                _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.8f, worldPosition.z);
                 _audioSource.PlayOneShot(_dropSound);
 
                 RaycastHit hit2;
@@ -78,7 +78,7 @@ public class DragObject : MonoBehaviour
         {
             Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
-            _currentDragObject.transform.position = new Vector3(worldPosition.x, 2f, worldPosition.z);
+            _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.6f, worldPosition.z);
         }
     }
 
