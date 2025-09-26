@@ -42,8 +42,8 @@ public class MainGame : MonoBehaviour
             //int rows = Mathf.CeilToInt((float)_lettersForLevel._levelLetters.Count);
             //float cellHeight = parentRect.rect.height / rows ;
             //_grid.GetComponent<GridLayoutGroup>().cellSize = new Vector2(cellHeight, cellHeight);
-            GameObject letter = Instantiate(_letterPrefab, _grid.transform);
-            letter.GetComponent<TextMeshProUGUI>().text = c.ToString().ToUpper();
+            /*GameObject letter = Instantiate(_letterPrefab, _grid.transform);
+            letter.GetComponent<TextMeshProUGUI>().text = c.ToString().ToUpper();*/
         }
 
     }
