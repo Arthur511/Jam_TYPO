@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd5517d5edbe5045891e8f1d0377375, type: 3}
+  m_Name: Carnet
+  m_EditorClassIdentifier: 
+  _objectName: Carnet
+  _prefabObject: {fileID: 5573476429588979219, guid: 7dc06c2874a36784493d9c2f93675ab6, type: 3}
+  _correctPosition: 0
