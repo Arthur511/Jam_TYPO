@@ -2,6 +2,9 @@ using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 public class MainGame : MonoBehaviour
 {
@@ -14,6 +17,10 @@ public class MainGame : MonoBehaviour
     [SerializeField] TextMeshProUGUI _textMeshPro;
     [SerializeField] List<SpawnableObject> _spawnableObjects;
     [SerializeField] Letters _lettersForLevel;
+
+    [SerializeField] RectTransform parentRect;
+    [SerializeField] GameObject _letterPrefab;
+    [SerializeField] GameObject _grid;
 
     [SerializeField] Transform _spawnPointObject;
 
@@ -28,6 +35,16 @@ public class MainGame : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+        foreach (char c in _lettersForLevel._levelLetters)
+        {
+            int rows = Mathf.CeilToInt((float)_lettersForLevel._levelLetters.Count);
+            float cellHeight = parentRect.rect.height / rows ;
+            _grid.GetComponent<GridLayoutGroup>().cellSize = new Vector2(cellHeight, cellHeight);
+            GameObject letter = Instantiate(_letterPrefab, _grid.transform);
+            letter.GetComponent<TextMeshProUGUI>().text = c.ToString().ToUpper();
+        }
+
     }
 
     private void Update()
@@ -42,7 +59,6 @@ public class MainGame : MonoBehaviour
             }
         }
     }
-
 
     public void OnSubmit()
     {

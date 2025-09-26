@@ -4,6 +4,7 @@ public class DragObject : MonoBehaviour
 {
     public LayerMask mask;
     public LayerMask _snapMask;
+    public LayerMask _snapUpperMask;
 
     GameObject _currentDragObject;
 
