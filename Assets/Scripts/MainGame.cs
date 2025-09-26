@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static UnityEngine.Rendering.DebugUI.Table;
@@ -114,7 +115,7 @@ public class MainGame : MonoBehaviour
 
     public void WinRoom()
     {
-        Debug.Log("Room Completed");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
