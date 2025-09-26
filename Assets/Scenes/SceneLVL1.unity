@@ -263,7 +263,6 @@ GameObject:
   m_Component:
   - component: {fileID: 260438990}
   - component: {fileID: 260438993}
-  - component: {fileID: 260438992}
   - component: {fileID: 260438991}
   m_Layer: 5
   m_Name: Canvas
@@ -312,29 +311,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &260438992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260438989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &260438993
 Canvas:
   m_ObjectHideFlags: 0
@@ -1225,7 +1201,7 @@ RectTransform:
   m_GameObject: {fileID: 904202312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1618826854}
@@ -1234,8 +1210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -110.64, y: -196.7}
-  m_SizeDelta: {x: -776.9795, y: -130}
+  m_AnchoredPosition: {x: 1091, y: -4}
+  m_SizeDelta: {x: -1385.2262, y: -858.3536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904202314
 MonoBehaviour:
