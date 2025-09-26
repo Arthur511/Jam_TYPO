@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectID: 2
+  ObjectID: 0
   CurrentSnapPoint: {fileID: 0}
 --- !u!65 &1791908500983824805
 BoxCollider:
