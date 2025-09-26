@@ -2359,6 +2359,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ede90ebf4edaec40a1ddb10447847e6, type: 2}
   - {fileID: 11400000, guid: 0fdf8af72eb12dc49900adf8d62d1cb9, type: 2}
   - {fileID: 11400000, guid: 88bcded6871c5d745ae05148047e7fce, type: 2}
+  - {fileID: 11400000, guid: 1959883c1413d1a44b761a313b97e81b, type: 2}
+  - {fileID: 11400000, guid: bd5b6c37bc8501d478f2f3724a242a49, type: 2}
+  - {fileID: 11400000, guid: d60dbbdd8e2af3c4a87034824ebebfd6, type: 2}
   _lettersForLevel: {fileID: 11400000, guid: ad4466ebbb06fe0409088f24636eba91, type: 2}
   parentRect: {fileID: 904202313}
   _letterPrefab: {fileID: 3815117143182934350, guid: 100a95cbd7b699b468d4ac6e89256033, type: 3}
