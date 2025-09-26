@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd5517d5edbe5045891e8f1d0377375, type: 3}
+  m_Name: Tasse
+  m_EditorClassIdentifier: 
+  _objectName: Tasse
+  _prefabObject: {fileID: 661048893037608033, guid: d55e02de6be693f43bca06854e76d9c3, type: 3}
+  _correctPosition: 0
