@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd5517d5edbe5045891e8f1d0377375, type: 3}
   m_Name: Livre
   m_EditorClassIdentifier: 
-  _objectName: 
-  _prefabObject: {fileID: 0}
+  _objectName: Livre
+  _prefabObject: {fileID: 5040559012244858930, guid: f65964e0011543946b8219889fdc7b3e, type: 3}
   _correctPosition: 0

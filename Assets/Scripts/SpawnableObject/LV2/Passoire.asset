@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd5517d5edbe5045891e8f1d0377375, type: 3}
   m_Name: Passoire
   m_EditorClassIdentifier: 
-  _objectName: 
-  _prefabObject: {fileID: 0}
+  _objectName: Passoire
+  _prefabObject: {fileID: 7234555759794417475, guid: 334b46fd32b21314faac8ee62095837b, type: 3}
   _correctPosition: 0
