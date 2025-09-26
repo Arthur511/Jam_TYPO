@@ -2214,6 +2214,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 58d1bec80aa26bd4e9f6afe56f5d3161, type: 2}
   - {fileID: 11400000, guid: 451f6e6fdff223f41ba932dd7f8b2fe9, type: 2}
   - {fileID: 11400000, guid: b0e184af2dee3a041bf565b25cdc051b, type: 2}
+  - {fileID: 11400000, guid: cd5af968a0bf5bd469fc1dec083c8e60, type: 2}
+  - {fileID: 11400000, guid: ac8d6e02315592b48846bc60053d9a7a, type: 2}
   _lettersForLevel: {fileID: 11400000, guid: c3025252921b3ff448b57fd27b759512, type: 2}
   parentRect: {fileID: 288829380}
   _letterPrefab: {fileID: 3815117143182934350, guid: 100a95cbd7b699b468d4ac6e89256033, type: 3}
