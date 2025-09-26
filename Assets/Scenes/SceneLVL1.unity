@@ -2149,11 +2149,11 @@ MonoBehaviour:
   _inputField: {fileID: 861205608}
   _textMeshPro: {fileID: 423924398}
   _spawnableObjects:
-  - {fileID: 11400000, guid: 38b1251b9e792f9459020094866abbc3, type: 2}
-  - {fileID: 11400000, guid: 2d58fb7bd1f785f4cb848d1a641a239e, type: 2}
-  - {fileID: 11400000, guid: 4fe9e7a26025932418bcfe7f33568a99, type: 2}
-  - {fileID: 11400000, guid: d3c3f85286ff9474481166dc6d3c36ec, type: 2}
-  - {fileID: 11400000, guid: 4125cc705058dd4499c3af08fb9bcfa2, type: 2}
+  - {fileID: 11400000, guid: 5d20d834ad1f9a347a3476b3c20c9f91, type: 2}
+  - {fileID: 11400000, guid: 4348b61d3391822478a2974f9011f526, type: 2}
+  - {fileID: 11400000, guid: 7ede90ebf4edaec40a1ddb10447847e6, type: 2}
+  - {fileID: 11400000, guid: 0fdf8af72eb12dc49900adf8d62d1cb9, type: 2}
+  - {fileID: 11400000, guid: 88bcded6871c5d745ae05148047e7fce, type: 2}
   _lettersForLevel: {fileID: 11400000, guid: ad4466ebbb06fe0409088f24636eba91, type: 2}
   parentRect: {fileID: 904202313}
   _letterPrefab: {fileID: 3815117143182934350, guid: 100a95cbd7b699b468d4ac6e89256033, type: 3}
