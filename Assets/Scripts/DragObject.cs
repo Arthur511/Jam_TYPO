@@ -8,6 +8,10 @@ public class DragObject : MonoBehaviour
 
     GameObject _currentDragObject;
 
+    [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioClip _dragSound;
+    [SerializeField] AudioClip _dropSound;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,6 +31,7 @@ public class DragObject : MonoBehaviour
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint._isSomethingInPoint = false;
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = null;
                     }
+                    _audioSource.PlayOneShot(_dragSound);
                     Cursor.visible = false;
                 }
             }
@@ -35,6 +40,7 @@ public class DragObject : MonoBehaviour
                 Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
                 _currentDragObject.transform.position = new Vector3(worldPosition.x, 0, worldPosition.z);
+                _audioSource.PlayOneShot(_dropSound);
 
                 RaycastHit hit2;
                 Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit2, 100, _snapMask);
