@@ -8,9 +8,9 @@ public class DragObject : MonoBehaviour
 
     GameObject _currentDragObject;
 
-    // AudioSource _audioSource
-    // AudioClip _dragSound
-    // AudioClip _dropSound
+    [SerializeField] AudioSource _audioSource;
+    [SerializeField] AudioClip _dragSound;
+    [SerializeField] AudioClip _dropSound;
 
     private void Update()
     {
@@ -31,7 +31,7 @@ public class DragObject : MonoBehaviour
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint._isSomethingInPoint = false;
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = null;
                     }
-                    //_audioSource.Play(_dragSound)
+                    _audioSource.PlayOneShot(_dragSound);
                     Cursor.visible = false;
                 }
             }
@@ -40,6 +40,7 @@ public class DragObject : MonoBehaviour
                 Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
                 _currentDragObject.transform.position = new Vector3(worldPosition.x, 0, worldPosition.z);
+                _audioSource.PlayOneShot(_dropSound);
 
                 RaycastHit hit2;
                 Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit2, 100, _snapMask);
@@ -50,7 +51,6 @@ public class DragObject : MonoBehaviour
                         if (!point2._isSomethingInPoint)
                         {
                             _currentDragObject.transform.position = point2.gameObject.transform.position;
-                            //_audioSource.Play(_dropSound)
                             if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
                             {
                                 _currentDragObject.layer = 0;
