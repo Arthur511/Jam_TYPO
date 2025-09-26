@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 579923420774560721}
   - component: {fileID: 6214230751383081306}
-  - component: {fileID: -6157793417626261231}
+  - component: {fileID: 3133511814705526218}
+  - component: {fileID: 3435063323953125536}
   m_Layer: 6
   m_Name: Casserole
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectID: 1
   CurrentSnapPoint: {fileID: 0}
---- !u!65 &-6157793417626261231
+--- !u!65 &3133511814705526218
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,8 +68,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.28297132, y: 0.14489114, z: 0.28056365}
+  m_Center: {x: -0.0050757825, y: 0.003886044, z: -0.0020455495}
+--- !u!65 &3435063323953125536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661048893037608033}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3002637, y: 0.04599701, z: 0.06872225}
+  m_Center: {x: -0.27458775, y: 0.041321732, z: -0.007862717}
 --- !u!1001 &876708270517031954
 PrefabInstance:
   m_ObjectHideFlags: 0
