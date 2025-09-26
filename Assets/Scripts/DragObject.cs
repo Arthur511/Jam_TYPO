@@ -8,6 +8,10 @@ public class DragObject : MonoBehaviour
 
     GameObject _currentDragObject;
 
+    // AudioSource _audioSource
+    // AudioClip _dragSound
+    // AudioClip _dropSound
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,6 +31,7 @@ public class DragObject : MonoBehaviour
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint._isSomethingInPoint = false;
                         _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = null;
                     }
+                    //_audioSource.Play(_dragSound)
                     Cursor.visible = false;
                 }
             }
@@ -45,6 +50,7 @@ public class DragObject : MonoBehaviour
                         if (!point2._isSomethingInPoint)
                         {
                             _currentDragObject.transform.position = point2.gameObject.transform.position;
+                            //_audioSource.Play(_dropSound)
                             if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
                             {
                                 _currentDragObject.layer = 0;
