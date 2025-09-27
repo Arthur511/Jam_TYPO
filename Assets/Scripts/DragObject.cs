@@ -11,6 +11,8 @@ public class DragObject : MonoBehaviour
     [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioClip _dragSound;
     [SerializeField] AudioClip _dropSound;
+    [SerializeField] AudioClip _goodPlacementSound;
+    [SerializeField] AudioClip _winRoomSound;
 
     private void Update()
     {
@@ -56,9 +58,10 @@ public class DragObject : MonoBehaviour
                             {
                                 _currentDragObject.layer = 0;
                                 MainGame.instance._placementToComplete++;
+                                _audioSource.PlayOneShot(_goodPlacementSound);
                                 if (MainGame.instance._placementToComplete == MainGame.instance.ScoreToReach)
                                 {
-                                    MainGame.instance.WinRoom();
+                                    MainGame.instance.WinRoom(_audioSource, _winRoomSound);
                                 }
                             }
                             _currentDragObject.GetComponent<ObjectInformation>().CurrentSnapPoint = point2;

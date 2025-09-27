@@ -67,8 +67,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.025139518, y: 0.04830782, z: 0.1596716}
-  m_Center: {x: -0.0063009504, y: 0.026055735, z: -0.00055742264}
+  m_Size: {x: 0.042571507, y: 0.027219351, z: 0.1596716}
+  m_Center: {x: 0.0024150424, y: 0.025172489, z: -0.00055742264}
 --- !u!1001 &27456627220741236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,11 +79,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0802
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0565
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -91,19 +91,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -115,7 +115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8143710011712545758, guid: a4d4fc0c04715794ea46ff9b2975b7cd, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

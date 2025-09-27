@@ -1,11 +1,9 @@
 using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using static UnityEngine.Rendering.DebugUI.Table;
 
 public class MainGame : MonoBehaviour
 {
@@ -29,9 +27,11 @@ public class MainGame : MonoBehaviour
 
     bool _isInList = true;
     bool _isTextVisible = false;
+    bool _isntExist = false;
 
     float _timer = 3f;
     float _currentTimer;
+    private Scene _dontDestroyScene;
 
     private void Awake()
     {
@@ -65,21 +65,24 @@ public class MainGame : MonoBehaviour
     {
         _isInList = true;
         string _lowerInput = _inputField.text.ToLower().Trim();
+        _inputField.text = null;
         for (int i = 0; i < _lowerInput.Length; i++)
         {
             if (!_lettersForLevel._levelLetters.Contains(_lowerInput[i]))
             {
                 _isInList = false;
+                //_inputField.text = null;
                 AppearedText("Utilisation d'une lettre inexistante dans ce niveau");
                 _currentTimer = _timer;
                 _isTextVisible = true;
-                break;
+                return;
             }
+
         }
 
         if (_alreadySpawnables.Contains(_lowerInput))
         {
-            _inputField.text = null;
+            //_inputField.text = null;
             AppearedText("Mot déjà utilisé !");
             _currentTimer = _timer;
             _isTextVisible = true;
@@ -94,11 +97,21 @@ public class MainGame : MonoBehaviour
                 {
                     Instantiate(spawnableObject._prefabObject, _spawnPointObject);
                     _alreadySpawnables.Add(_lowerInput);
-                    break;
+                    //_inputField.text = null;
+                    return;
                 }
+                _isntExist = true;
             }
         }
-        _inputField.text = null;
+
+        if (_isntExist)
+        {
+            //_inputField.text = null;
+            AppearedText("Mot correct mais inexistant dans ce niveau");
+            _currentTimer = _timer;
+            _isTextVisible = true;
+        }
+
     }
 
 
@@ -113,8 +126,37 @@ public class MainGame : MonoBehaviour
         _textMeshPro.DOFade(0, 1f);
     }
 
-    public void WinRoom()
+    public void WinRoom(AudioSource audioSource, AudioClip clip)
     {
+        if (SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+        {
+            GameObject temp = new GameObject("Temp");
+            DontDestroyOnLoad(temp);
+            _dontDestroyScene = temp.scene;
+            Destroy(temp);
+
+
+            if (_dontDestroyScene.IsValid())
+            {
+                foreach (GameObject go in _dontDestroyScene.GetRootGameObjects())
+                {
+                    Object.Destroy(go);
+                }
+            }
+
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            StartCoroutine(WaitWinRoom(audioSource, clip));
+        }
+    }
+
+    IEnumerator WaitWinRoom(AudioSource audioSource, AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+        AppearedText("Pièce rangée !!!");
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
