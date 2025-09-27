@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 724315409454939278}
-  m_Layer: 0
+  - component: {fileID: -5684886084070722989}
+  - component: {fileID: 5685415020013418348}
+  m_Layer: 6
   m_Name: Verre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,41 @@ Transform:
   - {fileID: 7964316528509914617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5684886084070722989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244340847610313845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectID: 4
+  CurrentSnapPoint: {fileID: 0}
+--- !u!65 &5685415020013418348
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6244340847610313845}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04902246, y: 0.063413166, z: 0.050017316}
+  m_Center: {x: -0.0006133057, y: 0.015349992, z: -0.00026878528}
 --- !u!1001 &7569520537507359250
 PrefabInstance:
   m_ObjectHideFlags: 0

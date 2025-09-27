@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectID: 0
+  ObjectID: 4
   CurrentSnapPoint: {fileID: 0}
 --- !u!65 &7518670222733778127
 BoxCollider:
@@ -63,12 +63,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11095851, y: 0.111568555, z: 0.072752744}
-  m_Center: {x: -0.0070448406, y: 0.0960382, z: 0.017070953}
+  m_Size: {x: 0.09681394, y: 0.101044774, z: 0.08855169}
+  m_Center: {x: 0.000027444214, y: 0.09077631, z: -0.0002756454}
 --- !u!1001 &5479726609531451642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,43 +144,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b1407ff158de9b74da82d5f24666b4a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1182707420519629944}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1407ff158de9b74da82d5f24666b4a3, type: 3}
---- !u!1 &4668701745510974891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b1407ff158de9b74da82d5f24666b4a3, type: 3}
-  m_PrefabInstance: {fileID: 5479726609531451642}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &1182707420519629944
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4668701745510974891}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &5440734471548428049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1407ff158de9b74da82d5f24666b4a3, type: 3}

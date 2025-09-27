@@ -39,11 +39,11 @@ public class DragObject : MonoBehaviour
             {
                 Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
-                _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.8f, worldPosition.z);
+                _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.9f, worldPosition.z);
                 _audioSource.PlayOneShot(_dropSound);
 
                 RaycastHit hit2;
-                Physics.Raycast(_currentDragObject.transform.position, Vector3.up, out hit2, 100, _snapMask);
+                Physics.Raycast(_currentDragObject.transform.position, Vector3.down, out hit2, 100, _snapMask);
                 if (hit2.collider != null)
                 {
                     if (hit2.collider.gameObject.TryGetComponent<SnapPoint>(out SnapPoint point2))
@@ -51,6 +51,7 @@ public class DragObject : MonoBehaviour
                         if (!point2._isSomethingInPoint)
                         {
                             _currentDragObject.transform.position = point2.gameObject.transform.position;
+                            _currentDragObject.transform.rotation = point2.gameObject.transform.rotation;
                             if (point2._idObjectAtPoint == _currentDragObject.GetComponent<ObjectInformation>().ObjectID)
                             {
                                 _currentDragObject.layer = 0;
@@ -78,7 +79,7 @@ public class DragObject : MonoBehaviour
         {
             Vector3 position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.WorldToScreenPoint(_currentDragObject.transform.position).z);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
-            _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.6f, worldPosition.z);
+            _currentDragObject.transform.position = new Vector3(worldPosition.x, Camera.main.transform.position.y - 0.85f, worldPosition.z);
         }
     }
 
