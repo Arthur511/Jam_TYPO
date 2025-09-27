@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3649398198982686385}
   - component: {fileID: 3326399497229225527}
   - component: {fileID: 386715016214196721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Clef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectID: 0
+  ObjectID: 3
   CurrentSnapPoint: {fileID: 0}
 --- !u!65 &386715016214196721
 BoxCollider:
@@ -63,12 +63,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.031088376, y: 0.04159027, z: 0.08892271}
-  m_Center: {x: 0.0022500968, y: 0.008138245, z: -0.0073040277}
+  m_Size: {x: 0.026205957, y: 0.015786871, z: 0.07788583}
+  m_Center: {x: -0.00019111298, y: 0.0019675344, z: -0.010782425}
 --- !u!1001 &5304528492629964082
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectID: 4
+  ObjectID: 6
   CurrentSnapPoint: {fileID: 0}
 --- !u!65 &5685415020013418348
 BoxCollider:
@@ -67,8 +67,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.04902246, y: 0.063413166, z: 0.050017316}
-  m_Center: {x: -0.0006133057, y: 0.015349992, z: -0.00026878528}
+  m_Size: {x: 0.04902246, y: 0.06274475, z: 0.047939934}
+  m_Center: {x: -0.0006133057, y: 0.031406492, z: 0.0007699067}
 --- !u!1001 &7569520537507359250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ea470c36b169c945b20b207aa94689c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0146
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3ea470c36b169c945b20b207aa94689c, type: 3}
       propertyPath: m_LocalPosition.z

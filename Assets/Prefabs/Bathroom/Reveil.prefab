@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8631413382686774088}
-  m_Layer: 0
+  - component: {fileID: 1014216940217658902}
+  - component: {fileID: 1167697720726304793}
+  m_Layer: 6
   m_Name: Reveil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,41 @@ Transform:
   - {fileID: 3293628548901953977}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014216940217658902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943055294201123070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a18ee29d3d1a24d9c24a8109146a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectID: 7
+  CurrentSnapPoint: {fileID: 0}
+--- !u!65 &1167697720726304793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943055294201123070}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.069707595, y: 0.15917933, z: 0.14049503}
+  m_Center: {x: 0.003811095, y: 0.0819453, z: 0.00015975535}
 --- !u!1001 &3044407833880659538
 PrefabInstance:
   m_ObjectHideFlags: 0
